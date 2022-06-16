@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br><br><br>
+<link rel="stylesheet" href="{% static 'font/css/all.css' %}">
+<div class="container" >
+<!--     <section id="contact" class="contact">-->
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+          {% endfor %}
+          <h2 style="color:magenta">Contact</h2>
+         <h5 style="color:cadetblue"><i style="color:gold" class="fas fa-eye"></i> This is a means of getting in touch with us. <i style="color:gold" class="fas fa-eye"></i></h5>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <h3><i class="bx bx-map" style="color:red;"></i></h3>
+                  <h4 style="color:red"><b>Our Address</b></h4>
+                  <p style="color:green"><b>
+                       <br>
+                      Ibadan, OY 23402<br>
+                      Nigeria Africa <br></b>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                 <h3 style="color:blue"class="bx bx-envelope"></h3>
+                  <h3 style="color:gold">Email Us</h3>
+                  <p style="color:cadetblue"><b>blessed1adeoye@gmail.com<br>realbuar@yahoo.com<br>realbuar@gmail.com</b></p>
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                <div class="info-box mt-4">
+                 <h3 style="color:yellow" class="bx bx-phone-call"></h3>
+                  <h3 style="color:brown">Call Us</h3>
+                  <p style="color:cadetblue"> <b>+234 813 2986 310<br> +234 706 6092 663</b></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <img src="{% static 'img/blessed.jpg' %}" height="269" width="500">
+            
+
+            <form  method="post" action="{% url 'b:cont' %}" style="background-color:cadetblue; color:gold">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col form-group">
+                  {{ form.name|as_crispy_field }}
+                </div>
+                <div class="col form-group">
+                  {{ form.email|as_crispy_field }}
+                </div>
+              </div>
+              <div class="form-group">
+
+              </div>
+              <div class="form-group">
+                {{ form.message|as_crispy_field }}
+              </div>
+              <br>
+
+              <div class="text-center"><button class="btn btn-success" type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+</div>
+
+<br><br><br><br><br><br>
+
+
+
+{% endblock content %}

@@ -1,0 +1,394 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-xl-6">
+          <h1>Bettter digital experience with</h1>
+          <center>
+            <img src="{% static 'img/1.png' %}" height="75" width="100"><img src="{% static 'img/78.png' %}">
+          </center>
+          <h2>i am a Certified and Licensed Health Information Management &  Python Programming Practitioner</h2>
+          <a href="{% url 'b:about' %}" class="btn-get-started scrollto">KNOW <b style="color:gold">BLESSED</b></a>
+          {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  <main id="main">
+        <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch">
+            <div class="content">
+              <h3 style="color:gold;">we Are Certify & Licence  </h3>
+              <p style="color:green;">
+                <b>It gives Us Pleasure to Work with and For You</b>
+              </p>
+              <a href="" class="about-btn"> <img src="{% static 'img/78.png' %}"> <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Our Work</h4>
+                  <p><b>They are quickly deliver and responsive because God is in us</b></p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Expert</h4>
+                  <p><b>We are Expert in Our Deal because We are walking towards Perfectionism</b></p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4>Mother Teresa</h4>
+                  <p><b>" if you judge People, you have no time to Love Them " </b></p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4> Our Word to You </h4>
+                  <p><b>Test us and we will beat your Imagination</b></p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="121" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3579" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Tabs Section ======= -->
+    <section id="tabs" class="tabs">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Website</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">DESCRIPTIVE ANALYSIS</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">PROJECT MANAGEMENT </h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="ri-store-line"></i>
+              <h4 class="d-none d-lg-block">Predictive ANALYSIS</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <h3>MeaningFul WEBSITES</h3>
+                <p class="fst-italic">
+                  We Design and Develop Good Website app.
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i>Blogs Website .</li>
+                  <li><i class="ri-check-double-line"></i> Business Websites.</li>
+                  <li><i class="ri-check-double-line"></i> School Website.</li>
+                  <li><i class="ri-check-double-line"></i> Informational Website.</li>
+                  <li><i class="ri-check-double-line"></i> E-commerce Website.</li>
+                  <li><i class="ri-check-double-line"></i> Portfolios, etc.</li>
+                </ul>
+                <p>
+                  Website is a set of related web pages located under a single domain name, typically produced by a single person or organization
+                  <br>
+                  It can also be defined as a group of World Wide Web pages usually containing hyperlinks to each other and made available online by an individual,
+                  company, educational institute, government or organization.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="{% static 'img/vf.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="color:gold;">ANALYSIS TILL PRESENT</h3>
+                <p>
+                 Descriptive Analysis is the type of analysis that helps describe, show or summarize data points in a constructive way such
+                  that patterns might emerge that fulfil every condition of the data. It is one of the most important steps for conducting statistical data analysis
+                </p>
+                <p class="fst-italic">
+                  It is one of the most important steps for conducting Statistical Data Analysis.
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> it gives you a conclusion of the distribution of your data .</li>
+                  <li><i class="ri-check-double-line"></i> it helps to detect typos and outliers.</li>
+                  <li><i class="ri-check-double-line"></i> it help to identify similarities among variables, thus making it ready for conducting further statistical analyses.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'img/10.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Project Management</h3>
+                <p>
+                  Project Management is the process of leading the work of team to achieve all project goals within the given constraints.
+                  <br>
+
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> The objective is to produce a complete project while complies with the client's objectives.</li>
+                  <li><i class="ri-check-double-line"></i> It also shape or reform the client's brief to feasibly address the client's objectives</li>
+                </ul>
+                <p class="fst-italic">
+                  Project Management is the application of processes, methods, skills, knowledge and experience to achieve specific project objective according
+                  to the project acceptance criteria within agreed parameters. <br>
+                  Project Management has final deliverable that are constrained to a finite timescale and budget.....
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'img/12.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Predictive Analysis</h3>
+                <p>
+                  This type of Analysis uses data we have summarized to make logical predictions of the outcomes of the events.
+                  Predictive analysis relies on statistical modeling, which requires added technology and manpower to forecast
+                  it is important to understand that forecasting is only an estimate; the accuracy of predictions relies on quality and detailed data
+                </p>
+
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'img/8.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Tabs Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg ">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p style="color:gold">
+            we give our clients the best of what their want.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-briefcase"></i>
+              <h4 style="color:red">Health Information Management</h4>
+              <p>
+                Health information management (HIM) is the practice of acquiring, analyzing, and protecting digital and traditional Health information vital to provide quality patient care. It is a combination of business, science, and information technology. It organize, oversee, and secure patient health information data which includes symptoms, diagnoses, medical histories, test results, and procedures.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-card-checklist"></i>
+              <h4><a href="#">Desktop Application</a></h4>
+              <p>A desktop application is a software program that can be run on a standalone computer to perform a specific task by an end-user. Some desktop applications such as word editor, photo editing app and media player allow you to perform different tasks while other such as gaming apps are developed purely for entertainment. </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-bar-chart"></i>
+              <h4><a href="#">Network Administration</a></h4>
+              <p>We have  Certified Cisco Network Administrator and Practitioner that can  ensure the stable operation of the computer networks which includes planning,
+                developing, installing, configuring, maintaining, supporting, and optimizing all network hardware, software, and communication links</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-binoculars"></i>
+              <h4><a href="#">Security</a></h4>
+              <p>We can offer a Camera Security services in your Facilities, also known as video surveillance, is the use of video cameras to transmit a signal to a specific place, on a limited set of monitors.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-images"></i>
+              <h4><a href="#">Mobile Application</a></h4>
+              <p>A mobile application or app is a computer program or software application designed to run on a mobile device such as a phone, tablet, or watch.
+                <br> Mobile Application can be inform of Android Application or IOS </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-calendar4-week"></i>
+              <h4><a href="#">Web Application</a></h4>
+              <p>A Web application (Web app) is an application program that is stored on a remote server and delivered over the Internet through a browser interface.
+                <br> A web Application can run locally and natively on the operating system of the device.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+<!--        <div class="section-title">-->
+<!--          <h2 style="color:green">Testimonials</h2>-->
+<!--          <p style="color:gold">In good Faith this were given</p>-->
+<!--        </div>-->
+        {% for x in testi %}
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="{{ x.img }}" class="testimonial-img" alt="">
+                  <h3>{{ x.name }}</h3>
+                  <h4>{{ x.designation }}</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{ x.text }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>This is the Team Head that makes this Company Rolling.</p>
+        </div>
+
+        <div class="row">
+          {% for tm in tms %}
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{tm.img.url}}" class="img-fluid">
+                <div class="social">
+                  <a href="{{tm.twitter}}" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="{{tm.facebook}}" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="{{tm.instagram}}" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="{{tm.linkedin}}" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{ tm.name }}</h4>
+                <span>{{ tm.designation }}</span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section> <!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+<!-- End Contact Section -->
+
+  </main>
+
+{% endblock content %}
+
